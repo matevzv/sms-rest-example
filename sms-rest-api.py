@@ -6,12 +6,12 @@ import requests
 import json
 from datetime import datetime
 
-headers = {'Content-Type': 'application/json', 'Authorization': 'yc92PyLkeBUyqN1msDan6YOCl+IT2u9M'}
-api_url = "http://localhost:3000/api"
+headers = {'Content-Type': 'application/json', 'Authorization': ''}
+api_url = "https://www.e-osu.si/api"
 nodes_url = "/nodes"
 sensors_url = "/sensors"
 measurements_url = "/measurements"
-node_name = "test5"
+node_name = "test2"
 sensor_type = "SHT21"
 sensor_quantity = "humidity"
 sensor_unit = "%"
