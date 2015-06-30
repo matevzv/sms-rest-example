@@ -4,6 +4,7 @@ import sys
 import time
 import requests
 import json
+import random
 from datetime import datetime
 
 headers = {'Content-Type': 'application/json', 'Authorization': ''}
@@ -55,7 +56,7 @@ measurements = []
 for x in xrange(10):
     data = json.loads(measurement)
     data['ts'] = datetime.utcnow().isoformat()
-    data['value'] = x
+    data['value'] = random.randint(1, 30)
     measurements.append(data)
 
 r = requests.post(api_url+measurements_url, data=json.dumps(measurements), headers=headers)
